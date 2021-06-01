@@ -54,3 +54,12 @@ def pickle_dump_data_frame(df, filename = "df.pckl"):
 
     pickle.dump(df,outfile)
     outfile.close()
+    
+    
+def pickle_load_data_frame(filename = "df.pckl"):
+
+
+    infile = open(filename,'rb')
+    df = pickle.load(infile)
+    infile.close()
+    return df
