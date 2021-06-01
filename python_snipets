@@ -43,3 +43,14 @@ def remove_all(folder):
                 shutil.rmtree(file_path)
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
+            
+            
+            
+def pickle_dump_data_frame(df, filename = "df.pckl"):
+
+   
+    outfile = open(filename,'wb')
+
+
+    pickle.dump(df,outfile)
+    outfile.close()
